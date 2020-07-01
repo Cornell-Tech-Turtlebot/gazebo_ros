@@ -37,5 +37,5 @@ if [ "$desired_model_database_uri" = "" ]; then
 fi
 
 final=$(relocate_remappings "${final}")
-
-GAZEBO_MASTER_URI="$desired_master_uri" GAZEBO_MODEL_DATABASE_URI="$desired_model_database_uri" gzserver $final
+usevglrun="vglrun"
+GAZEBO_MASTER_URI="$desired_master_uri" GAZEBO_MODEL_DATABASE_URI="$desired_model_database_uri" $usevglrun gzserver $final
